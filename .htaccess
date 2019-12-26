@@ -1,0 +1,10 @@
+RewriteEngine on
+#RewriteCond $1 !^(index\.php|css|js|images|robots\.txt)
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_METHOD} GET
+
+#RewriteCond $1 !^(index\.php|cron|images|js|market|mayi_play|sitemap|tmp|robots\.txt|favicon\.ico)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
